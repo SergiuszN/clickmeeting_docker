@@ -1,0 +1,11 @@
+version: '3'
+services:
+  webserver:
+    container_name: clickmeeting_php
+    build: ./bin/php
+    ports:
+      - '8080:80'
+    volumes:
+      - './clickmeeting_code:/var/www/html/'
+    networks:
+      - default
